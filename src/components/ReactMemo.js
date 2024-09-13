@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const ReactMemo = ({tasks}) => {
+const ReactMemo = () => {
+  const[skills,setSkills] = useState([]);
+  const[skillinput,setSkillinput] = useState('');
+
   return (
     <div>
-        <ul>
+        <h1>React.memo</h1>
+        <input id='skill-input' type='text' onChange={(e)=>setSkillinput(e.target.value)}  value={skillinput}/>
+        <button id='skil-btn' onClick={()=>setSkills([...skills,skillinput])}>Add Skill</button>
+        <ul id='item-jumbotron'>
             {
-                tasks.map((task,index)=>(
-                    <li key={index} id={index === tasks.length - 1 ? 'item-jumbotron' : `todo-${index}`}>{task}</li>
-                ))
+              skills.map((skill,index)=><li key={index}>{skill}</li>)
             }
         </ul>
     </div>
