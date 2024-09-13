@@ -13,7 +13,7 @@ const UseMemo = ({ counter,handleIncrement }) => {
   return (
     <div>
         
-        Count: {counter}<button onClick={handleIncrement} id='incr-cnt'>+</button>
+        Count:<button onClick={handleIncrement} id='incr-cnt'>+</button>{counter}
       
         <h2>Expensive Calculation: {memoizedValue}</h2>
     </div>
