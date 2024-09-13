@@ -25,7 +25,7 @@ const App = () => {
        <p>{tasks}</p>
       <button onClick={addNewTask} id='add-todo-btn'>Add todo</button>
       <h2>
-        Counter: {counter}<button onClick={handleIncrement} id='incr-cnt'>+</button>
+        Counter:<button onClick={handleIncrement} id='incr-cnt'> + </button>{counter}
       </h2>
       <UseMemo counter={counter} />
       <input
