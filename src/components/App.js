@@ -4,13 +4,13 @@ import ReactMemo from './ReactMemo';
 
 const App = () => {
     const[counter,setCounter] = useState(0);
-    const[tasks,setTasks] = useState(["New todo"]);
+    const[tasks,setTasks] = useState(["New Todo"]);
     const[customTask,setCustomTask] = useState([]);
     const handleIncrement = ()=>{
         setCounter(counter+1);
     }
     const addNewTask = ()=>{
-        setTasks([...tasks,'New todo'])
+        setTasks([...tasks,'New Todo'])
     }
     const handleCustomTaskSubmit = ()=>{
         if (customTask.length >5) {
