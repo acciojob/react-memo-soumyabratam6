@@ -19,12 +19,12 @@ const App = () => {
         }
     }
   return (
-    <div>
+    <div id='main'>
        <h1>React.UseMemo</h1>
        <h1>My todos</h1>
        <p>{tasks}</p>
-      <button onClick={addNewTask}>Add todo</button>
-      <button onClick={handleIncrement}>Increment</button>
+      <button onClick={addNewTask} id='add-todo-btn'>Add todo</button>
+      <button onClick={handleIncrement} id='incr-cnt'>Increment</button>
       <h2>Counter: {counter}</h2>
       <UseMemo counter={counter} />
       <input
@@ -32,6 +32,7 @@ const App = () => {
         placeholder="Enter custom task"
         value={customTask}
         onChange={(e) => setCustomTask(e.target.value)}
+        id='skill-input'
       />
       <button onClick={handleCustomTaskSubmit}>Submit</button>
       <ReactMemo tasks={tasks} />
