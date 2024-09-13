@@ -34,7 +34,7 @@ const App = () => {
         onChange={(e) => setCustomTask(e.target.value)}
         id='skill-input'
       />
-      <button onClick={handleCustomTaskSubmit}>Submit</button>
+      <button onClick={handleCustomTaskSubmit} id='skill-btn'>Submit</button>
       <ReactMemo tasks={tasks} />
     </div>
   )

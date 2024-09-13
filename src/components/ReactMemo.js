@@ -6,7 +6,7 @@ const ReactMemo = ({tasks}) => {
         <ul>
             {
                 tasks.map((task,index)=>(
-                    <li key={index}>{task}</li>
+                    <li key={index} id={`todo-${index}`}>{task}</li>
                 ))
             }
         </ul>
