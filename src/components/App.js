@@ -24,10 +24,7 @@ const App = () => {
        <h1>My todos</h1>
        <p>{tasks}</p>
       <button onClick={addNewTask} id='add-todo-btn'>Add todo</button>
-      <h2>
-        Counter:<button onClick={handleIncrement} id='incr-cnt'>+</button>{counter}
-      </h2>
-      <UseMemo counter={counter} />
+      <UseMemo counter={counter} handleIncrement={handleIncrement} />
       <input
         type="text"
         placeholder="Enter custom task"
